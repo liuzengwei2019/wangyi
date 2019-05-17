@@ -1,15 +1,44 @@
+/**
+ * Created by Administrator on 2019/5/17.
+ */
 import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+import MSite from '../pages/MSite/MSite.vue'
+import Classify from '../pages/Classify/Classify.vue'
+import Identify from '../pages/Identify/Identify.vue'
+import ShoppingCart from '../pages/ShoppingCart/ShoppingCart.vue'
+import Profile from '../pages/Profile/Profile.vue'
 
-export default new Router({
-  routes: [
+
+Vue.use(VueRouter)
+
+export default new VueRouter({
+  mode:'history',
+  routes:[
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/msite',
+      component:MSite
+    },
+    {
+      path: '/classify',
+      component:Classify
+    },
+    {
+      path: '/identify',
+      component:Identify
+    },
+    {
+      path: '/shoppingCart',
+      component:ShoppingCart
+    },
+    {
+      path: '/profile',
+      component:Profile
+    },
+    {
+      path:'/',
+      redirect:'/msite'
     }
   ]
 })
