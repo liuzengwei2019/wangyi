@@ -17,8 +17,8 @@
         <i class="u-icon" :class="$route.path === '/shoppingcart' ? 'u-icon-tabBar-cart-active' : 'u-icon-tabBar-cart'"></i>
         <span class="text">购物车</span>
       </li>
-      <li class="item" @click="$router.replace('/profile')">
-        <i class="u-icon" :class="$route.path === '/profile' ? 'u-icon-tabBar-ucenter-active' : 'u-icon-tabBar-ucenter'"></i>
+      <li class="item" @click="$router.replace('/personal')">
+        <i class="u-icon" :class="$route.path === '/personal' ? 'u-icon-tabBar-ucenter-active' : 'u-icon-tabBar-ucenter'"></i>
         <span class="text">个人</span>
       </li>
     </ul>
@@ -27,7 +27,10 @@
 
 <script type="text/ecmascript-6">
   export default {
+    name:'FootGuide',
+    methods:{
 
+    }
   }
 </script>
 
